@@ -1,0 +1,21 @@
+<br>
+<form [formGroup]="searchForm" novalidate (ngSubmit)="searchTrack()">
+    <div class="form-group ">
+        <input type="text" class="form-control col-7 ml-3" placeholder="Enter search text" name="searchText" formControlName="searchParam">
+        <!-- <div class="alert alert-danger"
+            *ngIf="searchForm.controls['searchParam'].invalid && searchForm.controls['searchParam'].touched">
+            Can not find
+        </div> -->
+    <button class="btn btn-pink m-3" [disabled]="searchForm.invalid" type="submit">search</button>
+    </div>
+</form>
+
+<div class="card" *ngFor="let track of (tracks$ | async)?.results.trackmatches.track">
+    <div class="sign">
+        <div class="circle"></div>
+    </div>
+    <div class="data-box">
+        <span class="artist-name">{{track.artist}}</span> 
+        <span class="track">{{track.name}}</span>
+    </div>
+</div>

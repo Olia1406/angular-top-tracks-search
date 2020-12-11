@@ -1,0 +1,24 @@
+<main class="main-cont">
+    <div>TOP 50</div>
+    <div>BEST MUSIC</div>
+</main>
+
+<div class="tr-info"
+    *ngFor="let track of (topTracks$ | async)?.tracks.track | slice: startIndex :startIndex + tracksPerPage;">
+
+    <div class="img">
+        <a [href]=track.artist.url target="_blank">
+            <img src='../../assets/images/tr-img.png' alt="">
+        </a>
+        <a [href]=track.artist.url target="_blank">artist page</a>
+    </div>
+    <div class="tr-data">
+        <p class="artist">{{track.artist.name}} </p>
+        <p class="tr-name">{{track.name | titlecase}} </p>
+    </div>
+
+</div>
+
+
+<pagination class="d-flex justify-content-center mt-2" [totalItems]="50" [itemsPerPage]="tracksPerPage"
+    [(ngModel)]="currentPage" (pageChanged)="onPageChanged($event)"></pagination>

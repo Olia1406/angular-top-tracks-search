@@ -1,0 +1,128 @@
+.main-cont{
+    height: 30vw;
+    background-image: url(../../assets/images/sounds-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div{
+        font-size: 50px;
+        margin: 10px 40px;
+        font-weight: 700;
+        color: whitesmoke;
+        width: 30%;
+    }
+}
+.tr-info{
+    border: 1px solid transparent;
+    border-bottom-color: rgb(175, 173, 173) ;
+    margin: 2px;
+    height: 153px;
+    display: flex;
+    flex-direction: row;
+    .img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        width: 125px;
+        img{
+            width: 120px; 
+            height: 120px
+        }
+        a{
+            color: rgb(75, 73, 73);
+            &:visited{
+                color:rgb(228, 118, 136);
+            }
+        }
+    }
+    .tr-data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5px;
+        .artist{
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 20px;
+            color: rgb(88, 88, 88);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .tr-name{
+            font-size: 20px;
+            font-weight: 500;
+            color: rgb(53, 52, 52);
+        }
+    }
+}
+
+@media screen and (max-width:970px){
+    .main-cont{
+        div{
+            font-size: 40px;
+            margin: 10px 30px;
+        }
+    }
+}
+
+@media screen and (max-width:750px){
+    .main-cont{
+        div{
+            font-size: 35px;
+            margin: 10px 30px;
+        }
+    }
+}
+
+@media screen and (max-width:670px){
+    .main-cont{
+        div{
+            font-size: 30px;
+            margin: 10px 20px;
+        }
+    }
+}
+
+@media screen and (max-width:550px){
+    .main-cont{
+        div{
+            font-size: 25px;
+            margin: 10px 20px;
+        }
+    }
+}
+
+@media screen and (max-width:360px){
+    .main-cont{
+        height: 45vw;
+        div{
+            font-size: 23px;
+            margin: 10px 25px;
+            width: 20%;
+        }
+    }
+
+    .tr-info{
+        .tr-data{
+            .artist{
+                font-size: 17px;
+            }
+            .tr-name{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:300px){
+    .main-cont{
+        div{
+            font-size: 20px;
+            margin: 10px 20px;
+            width: 17%;
+        }
+    }
+}
